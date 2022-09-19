@@ -1,14 +1,23 @@
-import xw from 'xwind'
-import ButtonReact from '../components/ButtonReact'
-import ButtonStyled from '../components/ButtonStyled'
+import Head from "next/head";
+import Header from "../components/Header";
+import Feed from "../components/Feed";
+import Modal from "../components/Modal";
 
-const Index = () => (
-  <div css={xw`grid justify-center items-center h-screen space-y-20`}>
-    <div css={xw`space-y-20`}>
-      <ButtonReact>@emotion/react</ButtonReact>
-      <ButtonStyled>@emotion/styled</ButtonStyled>
+const Home = () => {
+  return (
+    <div className="bg-gray-50 h-screen overflow-y-scroll scrollbar-hide">
+      <Head>
+        <title>Instagram 2.0 by STRRRAA</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Header />
+
+      <Feed />
+
+      <Modal />
     </div>
-  </div>
-)
+  );
+};
 
-export default Index
+export default Home;
